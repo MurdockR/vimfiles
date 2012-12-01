@@ -18,6 +18,8 @@ Bundle "scrooloose/nerdtree"
 Bundle "tpope/vim-surround"
 Bundle "vim-scripts/VimClojure"
 Bundle "Lokaltog/vim-powerline"
+Bundle "tpope/vim-fugitive"
+Bundle "majutsushi/tagbar"
 """""""""""""""""""""""""""""""""""""""""""""
 "               Vim-Scripts                 " 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -47,6 +49,7 @@ set smarttab
 set nowrap
 set noerrorbells
 set novisualbell
+set laststatus=2
 let g:neocomplcache_enable_at_startup = 1
 map <F2> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""
