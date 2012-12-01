@@ -1,0 +1,67 @@
+"""""""""""""""""""""""""""""""""""""""""""""
+"               Vundle init                 "
+"""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+"""""""""""""""""""""""""""""""""""""""""""""
+"               Plugins                     "
+"""""""""""""""""""""""""""""""""""""""""""""
+"               Github Repos                " 
+"""""""""""""""""""""""""""""""""""""""""""""
+Bundle "gmarik/vundle"
+Bundle "Raimondi/delimitMate"
+Bundle "wookiehangover/jshint.vim"
+Bundle "Shougo/neocomplcache"
+Bundle "scrooloose/nerdtree"
+Bundle "tpope/vim-surround"
+Bundle "vim-scripts/VimClojure"
+Bundle "Lokaltog/vim-powerline"
+"""""""""""""""""""""""""""""""""""""""""""""
+"               Vim-Scripts                 " 
+"""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""
+"               Non-Github Repos            " 
+"""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""
+"               Vim Config                  " 
+"""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
+set t_Co=256
+syntax enable
+set number
+colorscheme Tomorrow-Night-Bright
+set nohlsearch
+set incsearch
+set ignorecase
+set ruler
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set nowrap
+set noerrorbells
+set novisualbell
+let g:neocomplcache_enable_at_startup = 1
+map <F2> :NERDTreeToggle<CR>
+"""""""""""""""""""""""""""""""""""""""""""""
+"             Enable tab completion         "
+"             for Neocomplcache             "
+"""""""""""""""""""""""""""""""""""""""""""""
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : "\<C-x>\<C-u>"
+function! s:check_back_space()"{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}}"
+"""""""""""""""""""""""""""""""""""""""""""""
+"              VimClojure setup             "
+"""""""""""""""""""""""""""""""""""""""""""""
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
+let g:vimclojure#WantNailgun = 1
+let g:vimclojure#SplitPos = "bottom"
