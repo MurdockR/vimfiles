@@ -20,6 +20,14 @@ Bundle "vim-scripts/VimClojure"
 Bundle "Lokaltog/vim-powerline"
 Bundle "tpope/vim-fugitive"
 Bundle "majutsushi/tagbar"
+Bundle "dag/vim2hs"
+Bundle "bitc/vim-hdevtools"
+Bundle "ujihisa/neco-ghc"
+Bundle "scrooloose/syntastic"
+Bundle "eagletmt/ghcmod-vim"
+Bundle "pbrisbin/html-template-syntax"
+Bundle "kana/vim-textobj-user"
+Bundle "kana/vim-textobj-indent"
 """""""""""""""""""""""""""""""""""""""""""""
 "               Vim-Scripts                 " 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -66,5 +74,10 @@ endfunction"}}}"
 """""""""""""""""""""""""""""""""""""""""""""
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
-let g:vimclojure#WantNailgun = 1
-let g:vimclojure#SplitPos = "bottom"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""
+"             Haskell Setup                 "
+"""""""""""""""""""""""""""""""""""""""""""""
+au FileType haskell nnoremap <buffer> <F3> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F4> :HdevtoolsClear<CR>
