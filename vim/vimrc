@@ -3,31 +3,24 @@
 """""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle/Vundle.vim
+call vundle#begin()
 """""""""""""""""""""""""""""""""""""""""""""
 "               Plugins                     "
 """""""""""""""""""""""""""""""""""""""""""""
 "               Github Repos                " 
 """""""""""""""""""""""""""""""""""""""""""""
-Bundle "gmarik/vundle"
-Bundle "Raimondi/delimitMate"
-Bundle "wookiehangover/jshint.vim"
-Bundle "Shougo/neocomplcache"
-Bundle "scrooloose/nerdtree"
-Bundle "tpope/vim-surround"
-Bundle "vim-scripts/VimClojure"
-Bundle "Lokaltog/vim-powerline"
-Bundle "tpope/vim-fugitive"
-Bundle "majutsushi/tagbar"
-Bundle "dag/vim2hs"
-Bundle "bitc/vim-hdevtools"
-Bundle "ujihisa/neco-ghc"
-Bundle "scrooloose/syntastic"
-Bundle "eagletmt/ghcmod-vim"
-Bundle "pbrisbin/html-template-syntax"
-Bundle "kana/vim-textobj-user"
-Bundle "kana/vim-textobj-indent"
+Plugin "VundleVim/Vundle.vim"
+Plugin "Raimondi/delimitMate"
+Plugin "wookiehangover/jshint.vim"
+Plugin "Shougo/neocomplcache"
+Plugin "scrooloose/nerdtree"
+Plugin "tpope/vim-surround"
+Plugin "vim-scripts/VimClojure"
+Plugin "Lokaltog/vim-powerline"
+Plugin "tpope/vim-fugitive"
+Plugin "majutsushi/tagbar"
+Plugin "scrooloose/syntastic"
 """""""""""""""""""""""""""""""""""""""""""""
 "               Vim-Scripts                 " 
 """""""""""""""""""""""""""""""""""""""""""""
@@ -39,6 +32,7 @@ Bundle "kana/vim-textobj-indent"
 """""""""""""""""""""""""""""""""""""""""""""
 "               Vim Config                  " 
 """""""""""""""""""""""""""""""""""""""""""""
+call vundle#end()
 filetype plugin indent on
 set t_Co=256
 syntax enable
